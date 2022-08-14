@@ -9,7 +9,7 @@ const Hero = ({ data }) => {
     <FirstPanel>
       <SplitWrapper>
         <Row>
-          <BigTitleText>The Great Purge</BigTitleText>
+          <BigTitleText>Political Life</BigTitleText>
           <ParaBox>
             <ParaText number="01">
               The Great Purge, also known as the “Great Terror”, was bloody polticial compaign meant
@@ -27,7 +27,7 @@ const Hero = ({ data }) => {
               />
             </ImageContainer>
           </ImageWrapper>
-          <BigTitleText>Большой террор</BigTitleText>
+          <BigTitleText>Tom Mboya</BigTitleText>
         </SecondLine>
       </SplitWrapper>
     </FirstPanel>

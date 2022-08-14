@@ -19,8 +19,8 @@ const Results = ({ data }) => {
     <ResultsSection>
       <Container>
         <TopRow>
-          <BigTitle>A failed</BigTitle>
-          <BigTitle>Success</BigTitle>
+          <BigTitle>Formative</BigTitle>
+          <BigTitle>Years</BigTitle>
         </TopRow>
         <Row>
           <Col image>
@@ -41,24 +41,29 @@ const Results = ({ data }) => {
           </Col>
           <Col>
             <NormalText>
-              Stalin’s Five Year Plan achieved amazing success. However, most of this came at the
-              cost of many human lives.
+              Mboya was educated at various Catholic mission schools. In 1942, he joined St. Mary's
+              School Yala - a Catholic secondary school in Yala, located in Nyanza province where
+              Mboya began his education in English and History.
             </NormalText>
           </Col>
         </Row>
         <HalfRow>
           <HalfCol>
             <ParaText number="03">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              In 1946, he attended the Holy Ghost College (later Mang'u High School), where he
+              passed well enough to proceed to do his Cambridge School Certificate. In 1948, Mboya
+              joined the Royal Sanitary Institute's Medical Training School for Sanitary Inspectors
+              at Nairobi, qualifying as an inspector in 1950.
             </ParaText>
           </HalfCol>
           <HalfCol>
             <ParaText number="04">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              He also enrolled in a certificate course in economics at Efficiency Correspondence
+              College of South Africa. In 1955, he received a scholarship from Britain's Trades
+              Union Congress to attend Ruskin College, University of Oxford, where he studied
+              industrial management.[5] After his graduation in 1956, he returned to Kenya and
+              joined politics at a time when the British government was gaining control over the
+              Kenya Land and Freedom Army Mau Mau uprising.
             </ParaText>
           </HalfCol>
         </HalfRow>

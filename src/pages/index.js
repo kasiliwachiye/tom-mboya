@@ -38,28 +38,28 @@ export const query = graphql`
         }
       }
     }
-    fyp_people: file(relativePath: { eq: "fiveyearplan/people.png" }) {
+    fyp_people: file(relativePath: { eq: "fiveyearplan/jfk.webp" }) {
       childImageSharp {
         fluid(fit: COVER) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    fyp_poster1: file(relativePath: { eq: "fiveyearplan/poster1.png" }) {
+    fyp_poster1: file(relativePath: { eq: "fiveyearplan/early-life.jpg" }) {
       childImageSharp {
         fluid(fit: COVER) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    fyp_poster2: file(relativePath: { eq: "fiveyearplan/poster2.png" }) {
+    fyp_poster2: file(relativePath: { eq: "fiveyearplan/rugby.jpg" }) {
       childImageSharp {
         fluid(fit: COVER) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    fyp_poster3: file(relativePath: { eq: "fiveyearplan/poster3.png" }) {
+    fyp_poster3: file(relativePath: { eq: "fiveyearplan/formative-years.jpg" }) {
       childImageSharp {
         fluid(fit: COVER) {
           ...GatsbyImageSharpFluid_withWebp
