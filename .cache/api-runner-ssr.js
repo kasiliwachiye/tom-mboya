@@ -1,23 +1,11 @@
 var plugins = [{
-      name: 'gatsby-plugin-react-helmet',
-      plugin: require('C:/Users/user/OneDrive/Desktop/Tom Mboya/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
-      options: {"plugins":[]},
-    },{
       name: 'gatsby-plugin-image',
       plugin: require('C:/Users/user/OneDrive/Desktop/Tom Mboya/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
-      name: 'gatsby-plugin-styled-components',
-      plugin: require('C:/Users/user/OneDrive/Desktop/Tom Mboya/node_modules/gatsby-plugin-styled-components/gatsby-ssr.js'),
-      options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false,"disableVendorPrefixes":false},
-    },{
-      name: 'gatsby-plugin-sitemap',
-      plugin: require('C:/Users/user/OneDrive/Desktop/Tom Mboya/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
-      options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
-    },{
       name: 'gatsby-plugin-manifest',
       plugin: require('C:/Users/user/OneDrive/Desktop/Tom Mboya/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#EAE4E4","theme_color":"#121111","display":"minimal-ui","icon":"src/images/icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"c2339c981989b9f3682a7b38d7588a3b"},
+      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
     },{
       name: 'default-site-plugin',
       plugin: require('C:/Users/user/OneDrive/Desktop/Tom Mboya/gatsby-ssr.js'),
