@@ -1,129 +1,168 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+/* eslint react/jsx-pascal-case: 0 */
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import { Hero, FiveYearPlan, Purge, Propaganda, NKVD } from '@views';
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+const HomePage = ({ data }) => {
+  return (
+    <>
+      <Hero data={data} />
+      <div id="economy">
+        <FiveYearPlan data={data} />
+      </div>
+      <div id="purge">
+        <Purge data={data} />
+      </div>
+      <Propaganda data={data} />
+      <div id="nkvd">
+        <NKVD data={data} />
+      </div>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+    </>
+  );
+};
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+export default HomePage;
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
+export const query = graphql`
   {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
-
-export default IndexPage
+    tom: file(relativePath: { eq: "tom.jpg" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fyp_people: file(relativePath: { eq: "fiveyearplan/people.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fyp_poster1: file(relativePath: { eq: "fiveyearplan/poster1.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fyp_poster2: file(relativePath: { eq: "fiveyearplan/poster2.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fyp_poster3: file(relativePath: { eq: "fiveyearplan/poster3.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    purge_people: file(relativePath: { eq: "purge/people.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    purge_rubble: file(relativePath: { eq: "purge/rubble.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    purge_soldiers: file(relativePath: { eq: "purge/soldiers.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    prop_poster1: file(relativePath: { eq: "propaganda/poster1.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    prop_poster2: file(relativePath: { eq: "propaganda/poster2.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    prop_poster3: file(relativePath: { eq: "propaganda/poster3.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    prop_poster4: file(relativePath: { eq: "propaganda/poster4.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    prop_poster5: file(relativePath: { eq: "propaganda/poster5.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    prop_poster6: file(relativePath: { eq: "propaganda/poster6.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    nkvd_police1: file(relativePath: { eq: "nkvd/police1.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    nkvd_police2: file(relativePath: { eq: "nkvd/police2.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    nkvd_police3: file(relativePath: { eq: "nkvd/police3.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    nkvd_police4: file(relativePath: { eq: "nkvd/police4.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    nkvd_police5: file(relativePath: { eq: "nkvd/police5.png" }) {
+      childImageSharp {
+        fluid(fit: COVER) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
